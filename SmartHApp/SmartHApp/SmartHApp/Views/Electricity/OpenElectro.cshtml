@@ -1,19 +1,239 @@
-﻿@model dynamic
+﻿@model List<SmartHApp.Models.ElectroViewModel>
 
 @{
     ViewBag.Title = "title";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@Scripts.Render("~/bundles/electric")
 
 <div class="row">
-    <div class="col-xs-6">
+    <div class="col-md-6">
         <div class="btn-group-vertical padding10emtop">
-            <button type="button" class="btn btn-primary width250 ">Вимикачі</button>
-            <button type="button" class="btn btn-primary width250 ">Світильники</button>
+            <button type="button" onclick="showtoggle()" class="btn btn-primary width250 ">Вимикачі</button>
+            <button type="button" onclick="showlamps()" class="btn btn-primary width250 ">Лампи</button>
         </div>
     </div>
-    <div class="col-xs-6">
-        <div id="switchedblock" class="hidden"></div>
-        <div id="lighter" class="hidden"></div>
+    <div class="col-md-6">
+        <div id="toggles" class="toggles hidden padding4emtop">
+            <div class="row text-center">
+                <div class="row">
+                    <img style="height: 120px" src="../../Images/spst-toggle.png" />
+                </div>
+                <div class="row padding2emtop">
+                    <div class="col-md-6">Всі перемикачі:</div>
+                    <div class="col-md-6">
+                        <div onclick="changeMainToggle()" class="onoffswitch">
+                            @if (Model.Where(x => x.Type == false).Count(x => x.Status) > Model.Where(x => x.Type == false).Count(x => x.Status == false))
+                            {
+                            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="maintoggleswitch" checked>
+                                <label class="onoffswitch-label" for="maintoggleswitch">
+                                    <span class="onoffswitch-inner"></span>
+                                    <span class="onoffswitch-switch"></span>
+                                </label>
+                            }
+                            else
+                            {
+                            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="maintoggleswitch">
+                                <label class="onoffswitch-label" for="maintoggleswitch">
+                                    <span class="onoffswitch-inner"></span>
+                                    <span class="onoffswitch-switch"></span>
+                                </label>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row padding2emtop">
+                @foreach (var sensor in Model.Where(x => x.Type == false))
+                {
+                <div style="transform: translateY(50%)" class="row backgrondlist">
+                    <div class="col-xs-4">
+                        @if (sensor.Status)
+                        {
+                        <img style="height: 40px;" src="../../Images/toggle_on.png" />
+                        }
+                        else
+                        {
+                        <img style="height: 40px;" src="../../Images/toggle_off.png" />
+                        }
+                    </div>
+                    <div class="col-xs-4 text-center">@sensor.Name</div>
+                    <div class="col-xs-4 " onclick="setToggleto(@sensor.Id)">
+                        @if (sensor.Status)
+                        {
+                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id=@string.Format("toggleswitch{0}", @sensor.Id) checked>
+                            <label class="onoffswitch-label" for=@string.Format("toggleswitch{0}", @sensor.Id)>
+                                <span class="onoffswitch-inner"></span>
+                                <span class="onoffswitch-switch"></span>
+                            </label>
+                        }
+                        else
+                        {
+                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id=@string.Format("toggleswitch{0}", @sensor.Id)>
+                            <label class="onoffswitch-label" for=@string.Format("toggleswitch{0}", @sensor.Id)>
+                                <span class="onoffswitch-inner"></span>
+                                <span class="onoffswitch-switch"></span>
+                            </label>
+                        }
+                    </div>
+                </div>
+                }
+            </div>
+
+
+        </div>
+        <div id="lamps" class="lamps hidden padding4emtop">
+            <div class="row text-center">
+                <div class="row">
+                    <img style="height: 120px" src="../../Images/lamp.png" />
+                </div>
+                <div class="row padding2emtop">
+                    <div class="col-md-6">Всі лампи:</div>
+                    <div class="col-md-6">
+                        <div onclick="changeMainlamp()" class="onoffswitch">
+                            @if (Model.Where(x => x.Type).Count(x => x.Status) > Model.Where(x => x.Type).Count(x => x.Status == false))
+                            {
+                            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="mainlampswitch" checked>
+                                <label class="onoffswitch-label" for="mainlampswitch">
+                                    <span class="onoffswitch-inner"></span>
+                                    <span class="onoffswitch-switch"></span>
+                                </label>
+                            }
+                            else
+                            {
+                            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="mainlampswitch">
+                                <label class="onoffswitch-label" for="mainlampswitch">
+                                    <span class="onoffswitch-inner"></span>
+                                    <span class="onoffswitch-switch"></span>
+                                </label>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row padding2emtop">
+                @foreach (var sensor in Model.Where(x => x.Type == true))
+                {
+                <div style="transform: translateY(50%)" class="row backgrondlist">
+                    <div class="col-xs-4">
+                        @if (sensor.Status)
+                        {
+                        <img style="height: 40px;" src="../../Images/lamp-on.png" />
+                        }
+                        else
+                        {
+                        <img style="height: 40px;" src="../../Images/lamp-off.png" />
+                        }
+                    </div>
+
+                    <div class="col-xs-4 text-center">@sensor.Name</div>
+                    <div class="col-xs-4 text-center" onclick="setLampto(@sensor.Id)">
+                            @if (sensor.Status)
+                            {
+                            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id=@string.Format("lampswitch{0}", @sensor.Id) checked>
+                                <label class="onoffswitch-label" for=@string.Format("lampswitch{0}", @sensor.Id)>
+                                    <span class="onoffswitch-inner"></span>
+                                    <span class="onoffswitch-switch"></span>
+                                </label>
+                            }
+                            else
+                            {
+                            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id=@string.Format("lampswitch{0}", @sensor.Id)>
+                                <label class="onoffswitch-label" for=@string.Format("lampswitch{0}", @sensor.Id)>
+                                    <span class="onoffswitch-inner"></span>
+                                    <span class="onoffswitch-switch"></span>
+                                </label>
+                            }
+                        </div>
+                </div>
+                }
+            </div>
+        </div>
     </div>
 </div>
+<style>
+    .onoffswitch {
+        position: relative;
+        width: 90px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+    }
+
+    .onoffswitch-checkbox {
+        display: none;
+    }
+
+    .onoffswitch-label {
+        display: block;
+        overflow: hidden;
+        cursor: pointer;
+        border: 2px solid #999999;
+        border-radius: 20px;
+    }
+
+    .onoffswitch-inner {
+        display: block;
+        width: 200%;
+        margin-left: -100%;
+        transition: margin 0.3s ease-in 0s;
+    }
+
+        .onoffswitch-inner:before, .onoffswitch-inner:after {
+            display: block;
+            float: left;
+            width: 50%;
+            height: 30px;
+            padding: 0;
+            line-height: 30px;
+            font-size: 14px;
+            color: white;
+            font-family: Trebuchet, Arial, sans-serif;
+            font-weight: bold;
+            box-sizing: border-box;
+        }
+
+        .onoffswitch-inner:before {
+            content: "ON";
+            padding-left: 10px;
+            background-color: #EBFF0F;
+            color: #000000;
+        }
+
+        .onoffswitch-inner:after {
+            content: "OFF";
+            padding-right: 10px;
+            background-color: #000000;
+            color: #999999;
+            text-align: right;
+        }
+
+    .onoffswitch-switch {
+        display: block;
+        width: 18px;
+        margin: 6px;
+        background: #FFFFFF;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 56px;
+        border: 2px solid #999999;
+        border-radius: 20px;
+        transition: all 0.3s ease-in 0s;
+    }
+
+    .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+        margin-left: 0;
+    }
+
+    .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+        right: 0px;
+    }
+</style>
+<script>
+    window.setmainlamp = '@Url.Action("SetMainLamp", "Electricity")';
+    window.setmaintoggle = '@Url.Action("SetMainToggle", "Electricity")';
+    window.setsensortoggle = '@Url.Action("SetSensorToggle", "Electricity")';
+    window.setsensorlamp = '@Url.Action("SetSensorLamp", "Electricity")';
+
+</script>

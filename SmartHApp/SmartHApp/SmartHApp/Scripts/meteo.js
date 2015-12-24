@@ -64,7 +64,7 @@ function savesensortemp(id) {
     var a = $('#numbersensortemp' + (id)).val();
     $.when($.post(window.setsensortemp, { temper: a, id: id }, function (data, result) {
         if (result == "success") {
-            $('#press').load((location.href + " #press"));
+            $('#temperature').load((location.href + " #temperature"));
         }
     })).then(showpress());
 }

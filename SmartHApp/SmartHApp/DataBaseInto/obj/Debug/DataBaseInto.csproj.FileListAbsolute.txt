@@ -1,13 +1,3 @@
-C:\Users\Oleg\Desktop\quelity\SmartHouseUI\SmartHApp\SmartHApp\DataBaseInto\bin\Debug\DataBaseInto.dll.config
-C:\Users\Oleg\Desktop\quelity\SmartHouseUI\SmartHApp\SmartHApp\DataBaseInto\bin\Debug\DataBaseInto.dll
-C:\Users\Oleg\Desktop\quelity\SmartHouseUI\SmartHApp\SmartHApp\DataBaseInto\bin\Debug\DataBaseInto.pdb
-C:\Users\Oleg\Desktop\quelity\SmartHouseUI\SmartHApp\SmartHApp\DataBaseInto\bin\Debug\EntityFramework.dll
-C:\Users\Oleg\Desktop\quelity\SmartHouseUI\SmartHApp\SmartHApp\DataBaseInto\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\Oleg\Desktop\quelity\SmartHouseUI\SmartHApp\SmartHApp\DataBaseInto\bin\Debug\EntityFramework.xml
-C:\Users\Oleg\Desktop\quelity\SmartHouseUI\SmartHApp\SmartHApp\DataBaseInto\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Oleg\Desktop\quelity\SmartHouseUI\SmartHApp\SmartHApp\DataBaseInto\obj\Debug\DataBaseInto.csprojResolveAssemblyReference.cache
-C:\Users\Oleg\Desktop\quelity\SmartHouseUI\SmartHApp\SmartHApp\DataBaseInto\obj\Debug\DataBaseInto.dll
-C:\Users\Oleg\Desktop\quelity\SmartHouseUI\SmartHApp\SmartHApp\DataBaseInto\obj\Debug\DataBaseInto.pdb
 D:\smart\SmartHouseUI\SmartHApp\SmartHApp\DataBaseInto\bin\Debug\DataBaseInto.dll.config
 D:\smart\SmartHouseUI\SmartHApp\SmartHApp\DataBaseInto\bin\Debug\DataBaseInto.dll
 D:\smart\SmartHouseUI\SmartHApp\SmartHApp\DataBaseInto\bin\Debug\DataBaseInto.pdb
@@ -18,3 +8,13 @@ D:\smart\SmartHouseUI\SmartHApp\SmartHApp\DataBaseInto\bin\Debug\EntityFramework
 D:\smart\SmartHouseUI\SmartHApp\SmartHApp\DataBaseInto\obj\Debug\DataBaseInto.dll
 D:\smart\SmartHouseUI\SmartHApp\SmartHApp\DataBaseInto\obj\Debug\DataBaseInto.pdb
 D:\smart\SmartHouseUI\SmartHApp\SmartHApp\DataBaseInto\obj\Debug\DataBaseInto.csprojResolveAssemblyReference.cache
+C:\Users\Oleg\Desktop\quelity\SmartHouseUI\SmartHApp\SmartHApp\DataBaseInto\bin\Debug\DataBaseInto.dll.config
+C:\Users\Oleg\Desktop\quelity\SmartHouseUI\SmartHApp\SmartHApp\DataBaseInto\bin\Debug\DataBaseInto.dll
+C:\Users\Oleg\Desktop\quelity\SmartHouseUI\SmartHApp\SmartHApp\DataBaseInto\bin\Debug\DataBaseInto.pdb
+C:\Users\Oleg\Desktop\quelity\SmartHouseUI\SmartHApp\SmartHApp\DataBaseInto\bin\Debug\EntityFramework.dll
+C:\Users\Oleg\Desktop\quelity\SmartHouseUI\SmartHApp\SmartHApp\DataBaseInto\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Oleg\Desktop\quelity\SmartHouseUI\SmartHApp\SmartHApp\DataBaseInto\bin\Debug\EntityFramework.xml
+C:\Users\Oleg\Desktop\quelity\SmartHouseUI\SmartHApp\SmartHApp\DataBaseInto\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Oleg\Desktop\quelity\SmartHouseUI\SmartHApp\SmartHApp\DataBaseInto\obj\Debug\DataBaseInto.csprojResolveAssemblyReference.cache
+C:\Users\Oleg\Desktop\quelity\SmartHouseUI\SmartHApp\SmartHApp\DataBaseInto\obj\Debug\DataBaseInto.dll
+C:\Users\Oleg\Desktop\quelity\SmartHouseUI\SmartHApp\SmartHApp\DataBaseInto\obj\Debug\DataBaseInto.pdb

@@ -65,7 +65,7 @@ namespace SmartHApp.Controllers
             double.TryParse(temper, out temp);
             int.TryParse(id, out idn);
             string name = Service.ChangeSensortemp(temp, idn);
-            Service.LogAction(DateTime.Now, string.Format("Cередній температуру на {0} змінено на {1}", name, temper), "Змінено");
+            Service.LogAction(DateTime.Now, string.Format("Cередній температуру на \"{0}\" змінено на {1}", name, temper), "Змінено");
             return Json("success");
         }
 
@@ -76,7 +76,7 @@ namespace SmartHApp.Controllers
             double.TryParse(temper, out temp);
             int.TryParse(id, out idn);
             string name = Service.ChangeSensorpress(temp,idn);
-            Service.LogAction(DateTime.Now, string.Format("Cередній тиск на {0} змінено на {1}",name, temper), "Змінено");
+            Service.LogAction(DateTime.Now, string.Format("Cередній тиск на \"{0}\" змінено на {1}",name, temper), "Змінено");
             return Json("success");
         }
 
