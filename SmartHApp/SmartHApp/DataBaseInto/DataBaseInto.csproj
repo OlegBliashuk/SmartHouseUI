@@ -51,6 +51,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseWork\IService.cs" />
+    <Compile Include="BaseWork\Service.cs" />
     <Compile Include="DBSet\Electric.cs" />
     <Compile Include="DBSet\ElectricState.cs" />
     <Compile Include="DBSet\Errors.cs" />

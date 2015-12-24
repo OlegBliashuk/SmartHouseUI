@@ -15,6 +15,5 @@ D:\smart\SmartHouseUI\SmartHApp\SmartHApp\DataBaseInto\bin\Debug\EntityFramework
 D:\smart\SmartHouseUI\SmartHApp\SmartHApp\DataBaseInto\bin\Debug\EntityFramework.SqlServer.dll
 D:\smart\SmartHouseUI\SmartHApp\SmartHApp\DataBaseInto\bin\Debug\EntityFramework.xml
 D:\smart\SmartHouseUI\SmartHApp\SmartHApp\DataBaseInto\bin\Debug\EntityFramework.SqlServer.xml
-D:\smart\SmartHouseUI\SmartHApp\SmartHApp\DataBaseInto\obj\Debug\DataBaseInto.csprojResolveAssemblyReference.cache
 D:\smart\SmartHouseUI\SmartHApp\SmartHApp\DataBaseInto\obj\Debug\DataBaseInto.dll
 D:\smart\SmartHouseUI\SmartHApp\SmartHApp\DataBaseInto\obj\Debug\DataBaseInto.pdb

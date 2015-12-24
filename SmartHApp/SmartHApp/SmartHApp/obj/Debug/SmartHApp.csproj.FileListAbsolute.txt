@@ -81,3 +81,4 @@ D:\smart\SmartHouseUI\SmartHApp\SmartHApp\SmartHApp\bin\Microsoft.Owin.Security.
 D:\smart\SmartHouseUI\SmartHApp\SmartHApp\SmartHApp\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 D:\smart\SmartHouseUI\SmartHApp\SmartHApp\SmartHApp\obj\Debug\SmartHApp.dll
 D:\smart\SmartHouseUI\SmartHApp\SmartHApp\SmartHApp\obj\Debug\SmartHApp.pdb
+D:\smart\SmartHouseUI\SmartHApp\SmartHApp\SmartHApp\obj\Debug\SmartHApp.csprojResolveAssemblyReference.cache
