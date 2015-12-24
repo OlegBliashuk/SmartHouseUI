@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace SmartHApp.Controllers
 {
-    public class StatisticController : Controller
+    public class StatisticController : BaseController
     {
         // GET: Statistic
         public ActionResult GetListLog()

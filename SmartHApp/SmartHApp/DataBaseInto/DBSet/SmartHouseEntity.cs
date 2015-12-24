@@ -20,12 +20,10 @@ namespace DataBaseInto.DBSet
         // Add a DbSet for each entity type that you want to include in your model. For more information 
         // on configuring and using a Code First model, see http://go.microsoft.com/fwlink/?LinkId=390109.
 
-        // public virtual DbSet<MyEntity> MyEntities { get; set; }
+        public virtual DbSet<Meteo> Meteo { get; set; }
+        public virtual DbSet<Logger> Logger { get; set; }
+        public virtual DbSet<Errors> Errors { get; set; }
+        public virtual DbSet<Electric> Electric { get; set; }
+        public virtual DbSet<ElectricState> ElectricState { get; set; }
     }
-
-    //public class MyEntity
-    //{
-    //    public int Id { get; set; }
-    //    public string Name { get; set; }
-    //}
 }

@@ -51,6 +51,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DBSet\Electric.cs" />
+    <Compile Include="DBSet\ElectricState.cs" />
+    <Compile Include="DBSet\Errors.cs" />
+    <Compile Include="DBSet\Logger.cs" />
+    <Compile Include="DBSet\Meteo.cs" />
     <Compile Include="DBSet\SmartHouseEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

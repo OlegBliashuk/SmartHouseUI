@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace SmartHApp.Controllers
 {
-    public class ElectricityController : Controller
+    public class ElectricityController : BaseController
     {
         // GET: Electricity
         public ActionResult OpenElectro()

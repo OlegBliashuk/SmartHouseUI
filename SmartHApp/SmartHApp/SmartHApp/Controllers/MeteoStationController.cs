@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace SmartHApp.Controllers
 {
-    public class MeteoStationController : Controller
+    public class MeteoStationController : BaseController
     {
         // GET: MeteoStation
         public ActionResult OpenMain()

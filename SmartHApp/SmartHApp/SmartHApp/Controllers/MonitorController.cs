@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace SmartHApp.Controllers
 {
-    public class MonitorController : Controller
+    public class MonitorController : BaseController
     {
         // GET: Monitor
         public ActionResult GetState()
