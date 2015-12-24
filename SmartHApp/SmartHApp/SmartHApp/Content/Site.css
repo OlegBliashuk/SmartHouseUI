@@ -1,9 +1,4 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
-}
-
-/* Set padding to keep content from hitting the edges */
+﻿/* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
@@ -21,4 +16,241 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+.handCursor {
+    cursor: pointer;
+}
+
+.cursorDefault {
+    cursor: default !important;
+}
+
+.yellowText {
+    color: #BC935A;
+}
+
+.red-text {
+    color: #00bfff;
+}
+
+.emptyHeight50 {
+    min-height: 50px;
+}
+
+.padding1emonlybottom {
+    padding-bottom: 1em;
+}
+
+.padding1emonlytop {
+    padding-top: 1em;
+}
+
+.blockHidden {
+    display: none;
+    text-align: center;
+}
+
+.blockVisible {
+    text-align: center;
+}
+
+.padding2emtop {
+    padding-top: 2em;
+}
+
+.font25 {
+    font-size: 25px;
+}
+
+.padding4embottom {
+    padding-bottom: 4em;
+}
+
+.buttonBlue {
+    text-transform: uppercase;
+    font-family: "futura-pt", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 14px;
+    border: none;
+    color: #ffffff;
+    background-color: #98deda;
+    text-decoration: none;
+    max-width: 100%;
+    min-width: 80%;
+}
+
+    .buttonBlue:hover {
+        text-transform: uppercase;
+        font-family: "futura-pt", sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        padding: 14px;
+        border: none;
+        color: #ffffff;
+        background-color: #012844;
+        text-decoration: none;
+        max-width: 100%;
+        min-width: 80%;
+    }
+
+.padding8emtop {
+    padding-top: 8em;
+}
+
+.padding10emtop {
+    padding-top: 10em;
+}
+
+.padding4emtop {
+    padding-top: 3em;
+    padding-bottom: 1em;
+}
+
+.minHeight100 {
+    min-height: 100px;
+}
+
+.padding01 {
+    padding: 2px;
+}
+
+.greenblock {
+    background-color: green;
+    -ms-opacity: 0.6;
+    opacity: 0.6;
+}
+
+    .greenblock:hover {
+        background-color: green;
+        -ms-opacity: 0.9;
+        opacity: 0.9;
+    }
+
+.redblock {
+    background-color: red;
+    -ms-opacity: 0.6;
+    opacity: 0.6;
+}
+
+    .redblock:hover {
+        background-color: red;
+        -ms-opacity: 0.9;
+        opacity: 0.9;
+    }
+
+.blueblock {
+    background-color: #0000ff;
+    -ms-opacity: 0.6;
+    opacity: 0.6;
+}
+
+    .blueblock:hover {
+        background-color: #0000ff;
+        -ms-opacity: 0.9;
+        opacity: 0.9;
+    }
+
+.greyblock {
+    background-color: gray;
+    -ms-opacity: 0.6;
+    opacity: 0.6;
+}
+
+    .greyblock:hover {
+        background-color: gray;
+        -ms-opacity: 0.9;
+        opacity: 0.9;
+    }
+
+.whitecolor {
+    color: #ffffff;
+    text-align: center;
+    vertical-align: middle;
+}
+
+body {
+    color: #1e2935;
+    font-family: "futura-pt", sans-serif;
+    font-size: 16px;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background: center no-repeat;
+    background-image: url('../Images/sweet_home-wide.png');
+    background-color: #000000;
+}
+
+html {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
+a:hover {
+    text-decoration: none;
+}
+
+h1 {
+    font-family: "lust-display", serif;
+    font-size: 85px;
+}
+
+@media screen and (max-width: 700px) {
+    h1 {
+        font-family: "lust-display", serif;
+        font-size: 50px;
+    }
+}
+
+h2 {
+    font-family: "lust-display", serif;
+    font-size: 47px;
+}
+
+h3 {
+    font-family: "lust-display", serif;
+    font-size: 30px;
+}
+
+h4 {
+    font-family: "oswald", serif;
+    font-size: 60px;
+}
+
+h5 {
+    font-family: "futura-pt", serif;
+    font-size: 28px;
+    line-height: 34px;
+}
+
+@media screen and (max-width: 1000px) {
+    .line-height-mobile {
+        line-height: 12px;
+    }
+}
+
+
+h6 {
+    font-family: "Oswald", sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.nomargin {
+    margin-top: 0;
+    margin-bottom: -30px;
+}
+
+.font14 {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+.dark-blue-color {
+    color: #1e2935;
+}
+.width250{
+    width: 300px!important;
 }
