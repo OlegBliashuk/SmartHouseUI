@@ -58,21 +58,25 @@ namespace SmartHApp.Controllers
             Service.LogAction(DateTime.Now, string.Format("Cередній тиск змінено на {0}", temper), "Змінено");
             return Json("success");
         }
-        public JsonResult SetSensorTemp(string temper)
+        public JsonResult SetSensorTemp(string temper,string id)
         {
             double temp;
+            int idn;
             double.TryParse(temper, out temp);
-            Service.ChangeMaintemp(temp);
-            Service.LogAction(DateTime.Now, string.Format("Середню температуру змінено на {0}", temper), "Змінено");
+            int.TryParse(id, out idn);
+            string name = Service.ChangeSensortemp(temp, idn);
+            Service.LogAction(DateTime.Now, string.Format("Cередній температуру на {0} змінено на {1}", name, temper), "Змінено");
             return Json("success");
         }
 
-        public JsonResult SetSensorPress(string temper)
+        public JsonResult SetSensorPress(string temper, string id)
         {
             double temp;
+            int idn;
             double.TryParse(temper, out temp);
-            Service.ChangeMainpress(temp);
-            Service.LogAction(DateTime.Now, string.Format("Cередній тиск змінено на {0}", temper), "Змінено");
+            int.TryParse(id, out idn);
+            string name = Service.ChangeSensorpress(temp,idn);
+            Service.LogAction(DateTime.Now, string.Format("Cередній тиск на {0} змінено на {1}",name, temper), "Змінено");
             return Json("success");
         }
 

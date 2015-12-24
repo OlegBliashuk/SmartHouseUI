@@ -96,5 +96,37 @@ namespace DataBaseInto.BaseWork
             }
             return logs;
         }
+
+        public static string ChangeSensorpress(double temp, int idn)
+        {
+            string name = null;
+            using (var context = new SmartHouseEntity())
+            {
+                var firstOrDefault = context.Meteo.FirstOrDefault(x => x.Id == idn);
+                if (firstOrDefault != null)
+                {
+                    firstOrDefault.DispaysDevice = temp;
+                    name = firstOrDefault.Name;
+                }
+                context.SaveChanges();
+            }
+            return name;
+        }
+
+        public static string ChangeSensortemp(double temp, int idn)
+        {
+            string name = null;
+            using (var context = new SmartHouseEntity())
+            {
+                var firstOrDefault = context.Meteo.FirstOrDefault(x => x.Id == idn);
+                if (firstOrDefault != null)
+                {
+                    firstOrDefault.DispaysDevice = temp;
+                    name = firstOrDefault.Name;
+                }
+                context.SaveChanges();
+            }
+            return name;
+        }
     }
 }

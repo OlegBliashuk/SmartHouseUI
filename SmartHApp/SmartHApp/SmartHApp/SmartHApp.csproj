@@ -224,8 +224,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\54-512.png" />
     <Content Include="Images\c-temperature-folded-icon.png" />
     <Content Include="Images\House.png" />
+    <Content Include="Images\Sensor-music-player-Icon.png" />
     <Content Include="Images\sweet_home-wide.png" />
     <Content Include="Images\term.png" />
     <Content Include="Scripts\ai.0.15.0-build58334.js" />
