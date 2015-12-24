@@ -260,3 +260,8 @@ h6 {
 .width250{
     width: 300px!important;
 }
+
+.backgrondlist{
+    background-color: #e6e6fa;
+    margin: 2px;
+}

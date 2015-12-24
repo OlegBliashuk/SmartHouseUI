@@ -22,10 +22,16 @@ namespace SmartHApp
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
+            bundles.Add(new ScriptBundle("~/bundles/meteo").Include(
+            "~/Scripts/meteo.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+
+            bundles.Add(new StyleBundle("~/Content/table").Include(
+                     "~/Content/tables.css"));
         }
     }
 }

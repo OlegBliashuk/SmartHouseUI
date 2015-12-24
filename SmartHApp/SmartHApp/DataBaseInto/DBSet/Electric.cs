@@ -34,6 +34,12 @@ namespace DataBaseInto.DBSet
             get;
             set;
         }
+
+        public bool Status
+        {
+            get;
+            set;
+        }
         public virtual ICollection<ElectricState> ElectricStates { get; set; }
     }
 }

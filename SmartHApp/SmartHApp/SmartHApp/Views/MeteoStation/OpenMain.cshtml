@@ -1,18 +1,81 @@
-﻿@model dynamic
+﻿@model SmartHApp.Models.AllMeteoViewMpdels
 
 @{
     ViewBag.Title = "title";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<div class="row">
-    <div class="col-xs-6">
+@Scripts.Render("~/bundles/meteo")
+<div  class="row">
+    <div class="col-md-6">
         <div class="btn-group-vertical padding10emtop">
-            <button type="button" class="btn btn-primary width250 ">Температура</button>
-            <button type="button" class="btn btn-primary width250 ">Тиск</button>
+            <button type="button" onclick="showtemp()" class="btn btn-primary width250 ">Температура</button>
+            <button type="button" onclick="showpress()" class="btn btn-primary width250 ">Тиск</button>
         </div>
     </div>
-    <div class="col-xs-6">
-        <div id="temperature" class="hidden"></div>
-        <div id="press" class="hidden"></div>
+    <div class="col-md-6">
+        <div id="temperature" class="temperature hidden padding4emtop">
+            <div>
+                <div class="row text-center">
+                    <div class="row">
+                        <img style="height: 120px" src="../../Images/c-temperature-folded-icon.png" />
+                    </div>
+                    <div id="temperaturestate" class="row padding1emonlytop">
+                        <div style="transform: translateY(50%); font-size: 50px" class="col-xs-6 normalcolor">@Model.AverageTemp &deg;С</div>
+                        <div class="col-xs-6"><input type="button" onclick="editMaintemp()" class="buttonBlue" value="Змінити" /></div>
+                    </div>
+                    <div id="temperatureedit" class="row hidden padding1emonlytop">
+                        <div style="font-size: 30px" class="col-xs-6"><input style="width: 70%; " id="numberedittemp" type="number" placeholder="@Model.AverageTemp" />&deg;С</div>
+                        <div class="col-xs-6"><input style="" type="button" onclick="saveMaintemp()" class="buttonBlue" value="Зберегти" /></div>
+                    </div>
+                </div>
+                <div class="row padding2emtop">
+                    @foreach (var sensor in Model.Sensors.Where(x => x.Type == false))
+                    {
+                    <div style="transform: translateY(50%)" class="row backgrondlist">
+                        <div class="col-xs-4">
+                            <img style="height: 40px;" src="../../Images/term.png" />
+                        </div>
+                        <div class="col-xs-4 text-center">@sensor.Name</div>
+                        <div class="col-xs-4">@sensor.Displayes&deg;С</div>
+                    </div>
+                    }
+                </div>
+            </div>
+
+        </div>
+        <div id="press" class="press hidden padding4emtop">
+            <div class="row text-center">
+                <div class="row">
+                    <img style="height: 120px" src="../../Images/c-temperature-folded-icon.png" />
+                </div>
+                <div id="pressstate" class="row padding1emonlytop">
+                    <div style="transform: translateY(50%); font-size: 30px" class="col-xs-6 normalcolor">@Model.AveragePress мм рт. ст. </div>
+                    <div class="col-xs-6"><input type="button" onclick="editMainpress()" class="buttonBlue" value="Змінити" /></div>
+                </div>
+                <div id="pressedit" class="row hidden padding1emonlytop">
+                    <div style="font-size: 30px" class="col-xs-6"><input style="width: 70%; " id="numbereditpress" type="number" placeholder="@Model.AveragePress" /></div>
+                    <div class="col-xs-6"><input style="" type="button" onclick="saveMainpress()" class="buttonBlue" value="Зберегти" /></div>
+                </div>
+            </div>
+            <div class="row padding2emtop">
+                @foreach (var sensor in Model.Sensors.Where(x => x.Type == true))
+                {
+                <div style="transform: translateY(50%)" class="row backgrondlist">
+                    <div class="col-xs-4">
+                        <img style="height: 40px;" src="../../Images/term.png" />
+                    </div>
+                    <div class="col-xs-4 text-center">@sensor.Name</div>
+                    <div class="col-xs-4">@sensor.Displayes мм рт. ст.</div>
+                </div>
+                }
+            </div>
+        </div>
     </div>
 </div>
+<script>
+    window.setmaintemp = '@Url.Action("SetMainTemp", "MeteoStation")';
+    window.setmainpress = '@Url.Action("SetMainPress", "MeteoStation")';
+    window.setsensortemp = '@Url.Action("SetSensorTemp", "MeteoStation")';
+    window.setsensorpress = '@Url.Action("SetSensorPress", "MeteoStation")';
+
+</script>
