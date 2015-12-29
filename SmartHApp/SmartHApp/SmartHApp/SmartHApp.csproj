@@ -214,6 +214,7 @@
     <Compile Include="Models\LogViewModel.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MeteoViewModel.cs" />
+    <Compile Include="Models\TestModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -308,6 +309,7 @@
     <Content Include="Views\Electricity\OpenElectro.cshtml" />
     <Content Include="Views\Statistic\GetListLog.cshtml" />
     <Content Include="Views\Monitor\GetState.cshtml" />
+    <Content Include="Views\Monitor\Test.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

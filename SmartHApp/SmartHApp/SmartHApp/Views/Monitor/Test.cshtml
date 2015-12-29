@@ -1,0 +1,14 @@
+﻿@model SmartHApp.Models.TestModel
+@{
+    ViewBag.Title = "Test";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row padding10emtop">
+    <div class="row">
+        <h1 class="text-center red-text">Виконано запитів: @Model.CountOfTests</h1>
+        <h1 class="text-center dark-blue-color">Часу на збереження: @Model.TimetoSave (mс)</h1>
+        <h1 class="text-center">Часу на видалення: @Model.TimeToDelete (mс) </h1>
+    </div>
+</div>
+
